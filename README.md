@@ -1,23 +1,28 @@
 # Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/simplefolio?color=blue)](https://github.com/cobidev/simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/simplefolio)
 
-## A clean, beautiful and responsive portfolio template for Developers!
-
-Feel free to use it as-is or customize it as much as you want. I was motivated to create this project because I wanted to contribute on something useful for the dev community :)
+## A minimal portfolio template for Developers!
 
 <h2 align="center">
-  <img src="https://github.com/cobidev/simplefolio/blob/master/examples/example.gif" alt="Simplefolio" width="600px" />
+  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Simplefolio" width="600px" />
+  <br>
+</h2>
+
+**_IMPORTANT NOTE_**: New fastest version came out, built with React + Gatsby! 🎉🎉🎉 See more: [Gatsby Simplefolio](https://github.com/cobidev/gatsby-simplefolio)
+
+<h2 align="center">
+  <img src="https://media.giphy.com/media/3oFzmq6Kj4yXZUVHmE/giphy.gif" alt="Look up!" width="600px" />
   <br>
 </h2>
 
 ## Features
-✔️ Modern UI Design + Reveal Animations\
-✔️ One Page Layout\
-✔️ Built with Bootstrap v4.3 + Custom SCSS\
-✔️ Light Clean Codes\
-✔️ Fully Responsive\
-✔️ Valid HTML5 & CSS3\
-✔️ Optimized with Webpack\
-✔️ Well organized Documentation
+
+⚡️ Modern UI Design + Reveal Animations\
+⚡️ One Page Layout\
+⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
+⚡️ Fully Responsive\
+⚡️ Valid HTML5 & CSS3\
+⚡️ Optimized with Webpack\
+⚡️ Well organized documentation
 
 To view a demo example, **[click here](https://simplfolio.netlify.com/)**\
 To view a live example, **[click here](https://cobidev.com/)**
@@ -30,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites 📋
 
-You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [NPM](http://npmjs.com)) installed on your computer.
 
 ```
 node@v10.16.0 or higher
@@ -38,11 +43,17 @@ npm@6.9.0 or higher
 git@2.17.1 or higher
 ```
 
+Also, you can use [Yarn](https://yarnpkg.com/) instead of NPM ☝️
+
+```
+yarn@v1.21.1 or higher
+```
+
 ---
 
 ## How To Use 🔧
 
-From your command line, clone and run Simplefolio:
+From your command line, first clone Simplefolio:
 
 ```bash
 # Clone this repository
@@ -53,29 +64,39 @@ $ cd simplefolio
 
 # Remove current origin repository
 $ git remote remove origin
+```
 
+Then you can install the dependencies either using NPM or Yarn:
+
+Using NPM:
+```bash
 # Install dependencies
 $ npm install
 
 # Start development server
 $ npm start
 ```
+Using Yarn:
+```bash
+# Install dependencies
+$ yarn
+
+# Start development server
+$ yarn start
+```
 
 **NOTE**:
-If your run into issues installing the dependencies, use this command:
+If your run into issues installing the dependencies with NPM, use this command:
 
 ```bash
 # Install dependencies with all permissions
 $ sudo npm install --unsafe-perm=true --allow-root
-
-# Start development server
-$ npm start
 ```
 
 Once your server has started, go to this url `http://localhost:8080/` and you will see the website running on a Development Server:
 
 <h2 align="center">
-  <img src="https://github.com/cobidev/simplefolio/blob/master/examples/example.png" alt="Simplefolio" width="100%">
+  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.png" alt="Simplefolio" width="100%">
 </h2>
 
 ---
@@ -86,7 +107,7 @@ Once your server has started, go to this url `http://localhost:8080/` and you wi
 
 Go to `/src/template.html` and fill your information, they are 5 sections:
 
-**Hero Section**
+### Hero Section
 
 - On `.hero-title`, put your custom title.
 - On `.hero-cta`, put your custom button cta.
@@ -96,7 +117,7 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
 <div id="hero" class="jumbotron">
   <div class="container">
     <h1 class="hero-title" class="load-hidden">
-      Hi, my name is <span class="text-color-main">John Doe</span>
+      Hi, my name is <span class="text-color-main">Your Name</span>
       <br />
       I'm the Unknow Developer.
     </h1>
@@ -108,9 +129,9 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
 <!-- /END Hero Section -->
 ```
 
-**About Section**
+### About Section
 
-- On `<img>` tag, fill the `src` property with your profile picture, your picture must live on `assets/` folder.
+- On `<img>` tag, fill the `src` property with your profile picture, your picture must be located inside `assets/` folder.
 - On `<p>` tag with class-name `.about-wrapper__info-text`, include information about you, I recommend to use 2 paragraphs in order to work well and a maximum of 3 paragraphs.
 - On last `<a>` tag, include your resume url on `href` property.
 
@@ -128,7 +149,7 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
             class="img-fluid rounded shadow-lg"
             height="auto"
             width="300px"
-            src="./assets/profile.png"
+            src="./assets/profile.jpg"
             alt="Profile Image"
           />
         </div>
@@ -154,13 +175,13 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
 <!-- /END About Section -->
 ```
 
-**Projects Section**
+### Projects Section
 
 - Each project lives inside on a `row`.
 - On `<h3>` tag with class-name `.project-wrapper__text-title`, include your project title.
 - On `<p>` tag with `loremp ipsum` text, include your project information.
 - On first `<a>` tag, put your project url on `href` property.
-- On second `<a>` tag, put your project repostiroy url on `href` property.
+- On second `<a>` tag, put your project repository url on `href` property.
 
 ---
 
@@ -193,7 +214,7 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
       <div class="project-wrapper__image">
         <a href="#!" target="_blank">
           <div data-tilt class="thumbnail rounded">
-            <img class="img-fluid" src="./assets/banner.png" />
+            <img class="img-fluid" src="./assets/project.jpg" />
           </div>
         </a>
       </div>
@@ -204,7 +225,7 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
 </section>
 ```
 
-**Contact Section**
+### Contact Section
 
 - On `<p>` tag with class-name `.contact-wrapper__text`, include some custom call-to-action message.
 - On `<a>` tag, put your email address on `href` property.
@@ -232,7 +253,7 @@ Go to `/src/template.html` and fill your information, they are 5 sections:
 <!-- /END Contact Section -->
 ```
 
-**Footer Section**
+### Footer Section
 
 - Put your social media link on each `<a>` links.
 - If you have more social-media accounts, see [Font Awesome Icons](https://fontawesome.com/v4.7.0/icons/) to put the corresponding additional social icon `.class`
@@ -266,7 +287,7 @@ Change the color theme of the website ( choose 2 colors to create a gradient ):
 Go to `src/styles/abstracts/_variables.scss` and only change the values on this classes `$main-color` and `$secondary-color` to your prefered HEX color
 
 ```scss
-// Defaut values
+// Default values
 $main-color: #02aab0;
 $secondary-color: #00cdac;
 ```
@@ -285,9 +306,10 @@ Because this template use Webpack maybe you can get errors during deployment, Pl
 
 **[WATCH NOW MY STEP-BY-STEP TUTORIAL FOR DEPLOYMENT](https://www.youtube.com/watch?v=soaG3GNSxJY)**
 
-## Others versions made by the community 👥
+## Others versions 👥
 
-[Simplefolio Ember.js](https://github.com/sernadesigns/simplefolio-ember) by [Michael Serna](https://github.com/sernadesigns)
+[Gatsby Simplefolio](https://github.com/cobidev/gatsby-simplefolio) by [Jacobo Martinez](https://github.com/cobidev)\
+[Ember.js Simplefolio](https://github.com/sernadesigns/simplefolio-ember) by [Michael Serna](https://github.com/sernadesigns)
 
 ## Technologies used 🛠️
 
@@ -295,6 +317,8 @@ Because this template use Webpack maybe you can get errors during deployment, Pl
 - [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - Front-end component library
 - [Sass](https://sass-lang.com/documentation) - CSS extension language
 - [ScrollReveal.js](https://scrollrevealjs.org/) - JavaScript library
+- [Tilt.js](https://gijsroge.github.io/tilt.js/) - JavaScript tiny parallax library
+- [Popper.js](https://popper.js.org/) - JavaScript popover library
 
 ## Authors
 
